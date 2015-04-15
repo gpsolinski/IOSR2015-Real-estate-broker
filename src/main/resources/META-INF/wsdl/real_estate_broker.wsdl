@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:jms="http://cxf.apache.org/transports/jms"
+                  xmlns:tns="http://real-estate-broker.iosr.egh.edu.pl"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  targetNamespace="http://real-estate-broker.iosr.egh.edu.pl">
+
+    <!-- Type definitions for input- and output parameters for webservice -->
+    <wsdl:types>
+        <xs:schema targetNamespace="http://real-estate-broker.iosr.egh.edu.pl">
+            <xs:element name="flatInfo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="address"/>
+                        <xs:element type="xs:string" name="phone"/>
+                        <xs:element type="xs:int" name="rooms"/>
+                        <xs:element type="xs:double" name="size"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="flatInfoResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:int" name="code"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+
+    <!-- Message definitions for input and output -->
+    <wsdl:message name="inputFlatInfo">
+        <wsdl:part name="in" element="tns:flatInfo"/>
+    </wsdl:message>
+    <wsdl:message name="outputFlatInfo">
+        <wsdl:part name="out" element="tns:flatInfoResponse"/>
+    </wsdl:message>
+
+    <!-- Port (interface) definitions -->
+    <wsdl:portType name="AddFlatInfoPortType">
+        <wsdl:operation name="AddFlatInfo">
+            <wsdl:input message="tns:inputFlatInfo"/>
+            <wsdl:output message="tns:outputFlatInfo"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <!-- Port bindings to transports and encoding - HTTP, document literal encoding is used -->
+    <wsdl:binding name="AddFlatInfoBinding" type="tns:AddFlatInfoPortType">
+        <soap:binding style="document" transport="http://cxf.apache.org/transports/jms"/>
+        <wsdl:operation name="AddFlatInfo">
+            <soap:operation style="document"/>
+            <wsdl:input name="inputFlatInfo">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="outputFlatInfo">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <!-- Service definition -->
+    <wsdl:service name="AddFlatInfoEndpointService">
+        <wsdl:port name="AddFlatInfoPort" binding="tns:AddFlatInfoBinding">
+            <jms:address destinationStyle="queue" jndiConnectionFactoryName="ConnectionFactory" jndiDestinationName="dynamicQueues/real.estate.broker.queue">
+                <jms:JMSNamingProperty name="java.naming.factory.initial" value="org.apache.activemq.jndi.ActiveMQInitialContextFactory"/>
+                <jms:JMSNamingProperty name="java.naming.provider.url" value="tcp://localhost:61616"/>
+            </jms:address>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>
