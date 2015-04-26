@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <groupId>pl.edu.agh.iosr</groupId>
-    <artifactId>real-estate-broker</artifactId>
-    <version>1.0-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>pl.edu.agh.iosr</groupId>
+  <artifactId>real-estate-broker</artifactId>
 
-    <dependencies>
-        <!-- Core Camel -->
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-core</artifactId>
-            <version>2.15.1</version>
-        </dependency>
-        <!-- Embedded ActiveMQ broker -->
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-broker</artifactId>
-            <version>5.11.1</version>
-        </dependency>
-        <!-- ActiveMQ connectivity for Camel -->
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-camel</artifactId>
-            <version>5.11.1</version>
-        </dependency>
-        <!-- Add support for JAXB marshaling -->
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-jaxb</artifactId>
-            <version>2.15.1</version>
-        </dependency>
-    </dependencies>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <dependencies>
+    <!-- Core Camel -->
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-core</artifactId>
+      <version>2.15.1</version>
+    </dependency>
+    <!-- Embedded ActiveMQ broker -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
+      <version>5.11.1</version>
+    </dependency>
+    <!-- ActiveMQ connectivity for Camel -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-camel</artifactId>
+      <version>5.11.1</version>
+    </dependency>
+    <!-- Add support for JAXB marshaling -->
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-jaxb</artifactId>
+      <version>2.15.1</version>
+    </dependency>
+  </dependencies>
+
+  <modules>
+    <module>realestatebroker.model</module>
+    <module>realestatebroker.activemq</module>
+    <module>realestatebroker.camelqueueservice</module>
+    <module>realestatebroker.persistence</module>
+    <module>realestatebroker.routing</module>
+    <module>realestatebroker.service</module>
+    <module>realestatebroker.web</module>
+    <module>realestatebroker.webservice</module>
+      <module>realestatebroker.db</module>
+  </modules>
+
 </project>
