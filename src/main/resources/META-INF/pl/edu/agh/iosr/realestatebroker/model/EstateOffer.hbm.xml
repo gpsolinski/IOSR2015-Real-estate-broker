@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <hibernate-mapping schema="realestatebroker">
     <class name="pl.edu.agh.iosr.realestatebroker.model.EstateOffer" table="house_offer">
         <meta attribute="extends">Abstract</meta>
