@@ -23,3 +23,8 @@ features:install activemq-broker
 * Do przetestowania uruchamiamy klienta poleceniem 
 ```mvn -Pclient```
 
+Kilka przydatnych komend consoli karafa (wciśnięcie tab podpowiada komendy):
+* ```help``` - otrzymujemy listę wszystkich komend
+* ```display``` - wyświetla logi
+* ```list``` - wyswietla zainstalowane bundle
+* ```update <numer_bundla>``` - aktualizuje paczkę (gdy zmienimy coś w kodzie i uruchomimy ```mvn install``` polecenie zainstaluje utworzoną w ten sposób nową paczkę)
