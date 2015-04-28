@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="public">
+    <class name="pl.edu.agh.iosr.realestatebroker.model.EstateOffer" table="estate_offer">
+        <meta attribute="extends">Abstract</meta>
+        <id name="id" column="id"  type="int">
+            <generator class="native" />
+        </id>
+
+        <property column="title" not-null="true" name="title" length="50" type="string" />
+        <property column="description" not-null="true" length="1024" name="description" type="string" />
+        <many-to-one name="owner" not-null="true" column="user_id" class="pl.edu.agh.iosr.realestatebroker.model.User" />
+        <property column="total_area" not-null="true" name="totalArea" type="short" />
+        <property column="living_area" not-null="true" name="livingArea" type="short" />
+        <property column="front_yard_area" not-null="false" name="frontYardArea" type="short" />
+        <property column="back_yard_area" not-null="false" name="backYardArea" type="short" />
+        <property column="number_of_bedrooms" not-null="true" name="numberOfBedrooms" type="short" />
+        <property column="number_of_floors" not-null="true" name="numberOfFloors" type="short" />
+        <property column="garage_for_cars" not-null="false" name="garageForCars" type="short" />
+        <property column="seperate_kitchen" not-null="true" name="seperateKitchen" type="boolean" />
+        <property column="ctime" not-null="true" name="creationTime" type="timestamp" />
+        <property column="valid_until" not-null="false" name="validUntilDate" type="timestamp" />
+        <property column="estate_type" not-null="true" name="estateType" >
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">pl.edu.agh.iosr.realestatebroker.model.EstateType</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>
