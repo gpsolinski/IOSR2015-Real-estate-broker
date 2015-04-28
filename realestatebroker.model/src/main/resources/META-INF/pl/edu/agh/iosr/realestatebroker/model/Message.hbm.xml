@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="public">
+    <class name="pl.edu.agh.iosr.realestatebroker.model.Message" table="message">
+        <meta attribute="extends">Abstract</meta>
+        <id name="id" column="message_id"  type="int">
+            <generator class="native" />
+        </id>
+
+        <property column="conversation_id" name="conversationId" type="integer" />
+        <many-to-one not-null="true" name="estateOffer" column="estate_offer_id" class="pl.edu.agh.iosr.realestatebroker.model.EstateOffer" />
+        <many-to-one not-null="true" name="sender" column="sender_id" class="pl.edu.agh.iosr.realestatebroker.model.User" />
+        <many-to-one not-null="true" name="recipient" column="recipient_id" class="pl.edu.agh.iosr.realestatebroker.model.User" />
+        <property column="topic" not-null="true" length="50" name="topic" type="string" />
+        <property column="content" length="512" name="content" type="string" />
+        <property column="send_time" not-null="true" name="sendTime" type="timestamp" />
+    </class>
+</hibernate-mapping>

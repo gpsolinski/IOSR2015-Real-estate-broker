@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="public">
+    <class name="pl.edu.agh.iosr.realestatebroker.model.User" table="user">
+        <meta attribute="extends">Abstract</meta>
+        <id name="id" column="user_id"  type="int">
+            <generator class="native" />
+        </id>
+
+        <property column="login" not-null="true" name="login" length="20" type="string" />
+        <property column="first_name" not-null="true" length="35" name="firstName" type="string" />
+        <property column="last_name" not-null="true" length="35" name="lastName" type="string" />
+        <property column="email" not-null="true" length="60" name="email" type="string" />
+        <property column="phone" length="35" name="phoneNumber" type="string" />
+    </class>
+</hibernate-mapping>

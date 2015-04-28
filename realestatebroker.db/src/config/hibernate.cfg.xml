@@ -19,5 +19,6 @@
         <!-- mapping files -->
         <mapping resource="META-INF/pl/edu/agh/iosr/realestatebroker/model/EstateOffer.hbm.xml"/>
         <mapping resource="META-INF/pl/edu/agh/iosr/realestatebroker/model/User.hbm.xml"/>
+        <mapping resource="META-INF/pl/edu/agh/iosr/realestatebroker/model/Message.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
