@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
                   xmlns:jms="http://cxf.apache.org/transports/jms"
-                  xmlns:tns="http://real-estate-broker.iosr.egh.edu.pl"
+                  xmlns:tns="http://iosr.agh.edu.pl/real-estate-broker"
                   xmlns:xs="http://www.w3.org/2001/XMLSchema"
                   xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
                   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-                  targetNamespace="http://real-estate-broker.iosr.egh.edu.pl">
+                  targetNamespace="http://iosr.agh.edu.pl/real-estate-broker">
 
     <!-- Type definitions for input- and output parameters for webservice -->
     <wsdl:types>
-        <xs:schema targetNamespace="http://real-estate-broker.iosr.egh.edu.pl">
+        <xs:schema targetNamespace="http://iosr.agh.edu.pl/real-estate-broker">
             <xs:element name="flatInfo">
                 <xs:complexType>
                     <xs:sequence>
@@ -41,8 +41,8 @@
     <!-- Port (interface) definitions -->
     <wsdl:portType name="AddFlatInfoPortType">
         <wsdl:operation name="AddFlatInfo">
-            <wsdl:input message="tns:inputFlatInfo"/>
-            <wsdl:output message="tns:outputFlatInfo"/>
+            <wsdl:input message="tns:inputFlatInfo" name="inputFlatInfo"/>
+            <wsdl:output message="tns:outputFlatInfo" name="outputFlatInfo"/>
         </wsdl:operation>
     </wsdl:portType>
 
@@ -50,7 +50,7 @@
     <wsdl:binding name="AddFlatInfoBinding" type="tns:AddFlatInfoPortType">
         <soap:binding style="document" transport="http://cxf.apache.org/transports/jms"/>
         <wsdl:operation name="AddFlatInfo">
-            <soap:operation style="document"/>
+            <soap:operation soapAction="" style="document"/>
             <wsdl:input name="inputFlatInfo">
                 <soap:body use="literal"/>
             </wsdl:input>
@@ -63,11 +63,13 @@
     <!-- Service definition -->
     <wsdl:service name="AddFlatInfoEndpointService">
         <wsdl:port name="AddFlatInfoPort" binding="tns:AddFlatInfoBinding">
-            <jms:address destinationStyle="queue" jndiConnectionFactoryName="ConnectionFactory" jndiDestinationName="dynamicQueues/real.estate.broker.queue">
-                <jms:JMSNamingProperty name="java.naming.factory.initial" value="org.apache.activemq.jndi.ActiveMQInitialContextFactory"/>
+            <jms:address destinationStyle="queue" jndiConnectionFactoryName="ConnectionFactory"
+                         jndiDestinationName="dynamicQueues/add.house" connectionUserName="karaf" connectionPassword="karaf">
+                <jms:JMSNamingProperty name="java.naming.factory.initial"
+                                       value="org.apache.activemq.jndi.ActiveMQInitialContextFactory"/>
                 <jms:JMSNamingProperty name="java.naming.provider.url" value="tcp://localhost:61616"/>
             </jms:address>
+            <jms:clientConfig useConduitIdSelector="false"/>
         </wsdl:port>
     </wsdl:service>
-
 </wsdl:definitions>

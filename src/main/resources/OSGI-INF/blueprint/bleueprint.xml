@@ -12,15 +12,31 @@
 
     <camelContext trace="false" xmlns="http://camel.apache.org/schema/blueprint">
         <route>
-            <from uri="direct:route"/>
-
-            <log message="Hello World!"/>
+            <from uri="activemq:queue:add.house"/>
+            <to uri="xslt:xsl/remove_soap_tags.xsl"/>
+            <to uri="file:data/"/>
+            <unmarshal>
+                <jaxb contextPath="pl.edu.agh.iosr.real_estate_broker"/>
+            </unmarshal>
+            <setBody>
+                <simple>${ref:response}</simple>
+            </setBody>
+            <marshal>
+                <jaxb contextPath="pl.edu.agh.iosr.real_estate_broker"/>
+            </marshal>
+            <to uri="xslt:xsl/add_soap_tags.xsl"/>
         </route>
     </camelContext>
 
     <bean id="activemq"
           class="org.apache.activemq.camel.component.ActiveMQComponent">
         <property name="brokerURL" value="tcp://localhost:61616"/>
+        <property name="userName" value="karaf" />
+        <property name="password" value="karaf" />
+    </bean>
+    <bean id="response"
+          class="pl.edu.agh.iosr.real_estate_broker.FlatInfoResponse">
+        <property name="code" value="1" />
     </bean>
 
 </blueprint>
