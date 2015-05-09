@@ -1,9 +1,13 @@
-package pl.edu.agh.iosr.realestatebroker.dao;
+package pl.edu.agh.iosr.realestatebroker.service;
 
 import pl.edu.agh.iosr.realestatebroker.model.EstateOffer;
+
 import java.util.List;
 
-public interface EstateOfferDAO {
+/**
+ * Created by grzegorz on 2015-05-09.
+ */
+public interface EstateOfferService {
 
     public EstateOffer findById(int id);
 

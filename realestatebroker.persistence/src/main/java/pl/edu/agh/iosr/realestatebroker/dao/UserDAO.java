@@ -9,13 +9,13 @@ import java.util.List;
  */
 public interface UserDAO {
 
-    public User getUser (long id);
+    public User findById (int id);
 
-    public List<User> findUser();
+    public List<User> findAll();
 
-    public List<User> findUser(String key);
+    public List<User> findByLogin(String login);
 
-    public void saveUser (User usee);
+    public void save (User usee);
 
-    public void removeUser(long id);
+    public void remove(int id);
 }

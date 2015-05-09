@@ -13,7 +13,7 @@
         <dependency>
             <groupId>pl.edu.agh.iosr</groupId>
             <artifactId>realestatebroker.model</artifactId>
-           0 <version>1.0-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

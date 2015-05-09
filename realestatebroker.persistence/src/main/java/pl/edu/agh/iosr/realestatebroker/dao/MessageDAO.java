@@ -9,13 +9,13 @@ import java.util.List;
  */
 public interface MessageDAO {
 
-    public Message getMessage(long id);
+    public Message findById(int id);
 
-    public List<Message> findMessage();
+    public List<Message> findAll();
 
-    public List<Message> findMessage(String key);
+    public List<Message> findByTopic(String topic);
 
-    public void saveMessage(Message message);
+    public void save(Message message);
 
-    public void removeMessage(long id);
+    public void remove(int id);
 }
