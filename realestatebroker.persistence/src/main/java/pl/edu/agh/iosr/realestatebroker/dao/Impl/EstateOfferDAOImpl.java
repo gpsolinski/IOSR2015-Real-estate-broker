@@ -17,20 +17,20 @@ public class EstateOfferDAOImpl implements EstateOfferDAO {
     private static final transient Log LOG = LogFactory.getLog(EstateOfferDAOImpl.class);
     private SessionFactory sessionFactory;
     private Query query = null;
-    private final static String findEstateOfferByReference = "select i from estate_offer as i where i."l
-    private final static String findEstateOffer = "select i from estate_offer as i";
+    private final static String findEstateOfferByTitle = "select e from EstateOffer as e where e.title = :ref";
+    private final static String findEstateOffer = "select e from EstateOffer as e";
 
     public void setSessionFactory(SessionFactory _sessionFactory) {
         this.sessionFactory = _sessionFactory;
     }
 
     @Override
-    public EstateOffer getEstateOffer(long id) {
+    public EstateOffer findById(int id) {
         return (EstateOffer) this.sessionFactory.getCurrentSession().get(EstateOffer.class, id);
     }
 
     @Override
-    public List<EstateOffer> findEstateOffer() {
+    public List<EstateOffer> findAll() {
         query = this.sessionFactory.getCurrentSession().createQuery(findEstateOffer);
         List<EstateOffer> list = query.list();
 
@@ -38,22 +38,21 @@ public class EstateOfferDAOImpl implements EstateOfferDAO {
     }
 
     @Override
-    public List<EstateOffer> findEstateOffer(String key) {
-        query = this.sessionFactory.getCurrentSession().createQuery(findEstateOfferByReference);
-        query.setString("ref", key);
-        List<EstateOffer> list = q.list();
+    public List<EstateOffer> findByTitle(String title) {
+        query = this.sessionFactory.getCurrentSession().createQuery(findEstateOfferByTitle);
+        query.setString("ref", title);
+        List<EstateOffer> list = query.list();
 
         return list;
     }
 
     @Override
-    public void saveEstateOffer(EstateOffer estateOffer) {
-        SessionImpl session = (SessionImpl) this.sessionFactory.getCurrentSession();
+    public void save(EstateOffer estateOffer) {
         this.sessionFactory.getCurrentSession().saveOrUpdate(estateOffer);
     }
 
     @Override
-    public void removeEstateOffer(long id) {
+    public void remove(int id) {
         Object record = this.sessionFactory.getCurrentSession().load(EstateOffer.class, id);
         this.sessionFactory.getCurrentSession().delete(record);
     }

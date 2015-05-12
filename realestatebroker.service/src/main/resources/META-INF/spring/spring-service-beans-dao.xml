@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-         http://www.springframework.org/schema/beans
-         http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                      http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi
+                      http://www.springframework.org/schema/osgi/spring-osgi.xsd">
 
     <bean id="estateOfferServiceTarget" class="pl.edu.agh.iosr.realestatebroker.service.impl.EstateOfferServiceImpl">
         <property name="estateOfferDAO">
-            <ref bean="estateOfferDAO" />
+            <osgi:reference interface="pl.edu.agh.iosr.realestatebroker.dao.EstateOfferDAO"/>
         </property>
     </bean>
+
+    <bean id="abstractService" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager">
+            <osgi:reference interface="org.springframework.transaction.PlatformTransactionManager"/>
+        </property>
+    </bean>
+
+    <bean id="estateOfferService"
+          parent="abstractService"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+
+        <property name="target">
+            <ref bean="estateOfferServiceTarget" />
+        </property>
+
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+
 </beans>
