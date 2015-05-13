@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Export-Package: META-INF.wsdl,pl.edu.agh.iosr.realestatebroker.service
+ ;uses:="pl.edu.agh.iosr.realestatebroker.model";version="1.0.0.SNAPSH
+ OT"
+Private-Package: pl.edu.agh.iosr.realestatebroker.service.impl
+Built-By: dawid_000
+Tool: Bnd-0.0.255
+Bundle-Name: service [pl.edu.agh.iosr.realestatebroker]
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0.SNAPSHOT
+Build-Jdk: 1.7.0_55
+Bnd-LastModified: 1431509348553
+Bundle-ManifestVersion: 2
+Import-Package: META-INF.wsdl,javax.jws,javax.jws.soap,javax.transacti
+ on,javax.xml.bind,javax.xml.bind.annotation,javax.xml.namespace,javax
+ .xml.ws,org.aopalliance.aop;version="1.0",org.apache.commons.logging,
+ org.springframework.aop;version="2.5.6.SEC03",org.springframework.aop
+ .framework;version="2.5.6.SEC03",org.springframework.transaction;vers
+ ion="2.5.6.SEC03",org.springframework.transaction.interceptor;version
+ ="2.5.6.SEC03",pl.edu.agh.iosr.realestatebroker.dao,pl.edu.agh.iosr.r
+ ealestatebroker.model,pl.edu.agh.iosr.realestatebroker.service;versio
+ n="1.0.0.SNAPSHOT"
+Bundle-SymbolicName: service
+

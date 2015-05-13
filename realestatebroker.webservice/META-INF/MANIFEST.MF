@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Export-Package: META-INF.wsdl
+Built-By: dawid_000
+Build-Jdk: 1.7.0_55
+Bundle-Version: 1.0.0.SNAPSHOT
+Tool: Bnd-0.0.255
+Bundle-Name: webservice [pl.edu.agh.iosr.realestatebroker]
+Bnd-LastModified: 1431509351668
+Created-By: Apache Maven Bundle Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: webservice
+Import-Package: META-INF.wsdl,javax.jws,javax.jws.soap,javax.xml.bind,
+ javax.xml.bind.annotation,javax.xml.namespace,javax.xml.ws,org.aopall
+ iance.aop,org.springframework.aop,org.springframework.aop.framework,o
+ rg.springframework.transaction,org.springframework.transaction.interc
+ eptor,pl.edu.agh.iosr.realestatebroker.dao
+

@@ -23,13 +23,15 @@
   <modules>
     <module>realestatebroker.model</module>
     <module>realestatebroker.activemq</module>
-    <module>realestatebroker.camelqueueservice</module>
     <module>realestatebroker.persistence</module>
     <module>realestatebroker.routing</module>
     <module>realestatebroker.service</module>
-    <module>realestatebroker.web</module>
     <module>realestatebroker.webservice</module>
     <module>realestatebroker.db</module>
   </modules>
 
+  <properties>
+      <camel-version>2.15.1</camel-version>
+      <felix-version>2.0.1</felix-version>
+  </properties>
 </project>

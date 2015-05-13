@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: pl.edu.agh.iosr.realestatebroker.dao;uses:="pl.edu.agh
+ .iosr.realestatebroker.model"
+Private-Package: pl.edu.agh.iosr.realestatebroker.dao.Impl
+Built-By: dawid_000
+Tool: Bnd-0.0.255
+Bundle-Name: persistence [pl.edu.agh.iosr.realestatebroker]
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Build-Jdk: 1.7.0_55
+Bundle-Version: 1.0.0.SNAPSHOT
+Bnd-LastModified: 1431509348052
+Bundle-ManifestVersion: 2
+Import-Package: META-INF.pl.edu.agh.iosr.realestatebroker.model,org.ap
+ ache.commons.dbcp,org.apache.commons.logging,org.hibernate,org.hibern
+ ate.classic,org.postgresql,pl.edu.agh.iosr.realestatebroker.dao,pl.ed
+ u.agh.iosr.realestatebroker.model
+Bundle-SymbolicName: persistence
+

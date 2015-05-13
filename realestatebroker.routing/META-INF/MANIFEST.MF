@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Built-By: dawid_000
+Build-Jdk: 1.7.0_55
+Bundle-Version: 1.0.0.SNAPSHOT
+Tool: Bnd-0.0.357
+Bundle-Name: routing [pl.edu.agh.iosr.realestatebroker.routing]
+Bnd-LastModified: 1431509354995
+Created-By: Apache Maven Bundle Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: routing
+Import-Package: META-INF.wsdl,org.apache.activemq.camel.component,org.
+ apache.activemq.camel.converter,org.apache.activemq.pool,org.apache.c
+ amel;version="2.15",org.apache.camel.component;version="2.15",org.apa
+ che.camel.component.cxf,org.apache.camel.component.cxf.converter,org.
+ apache.camel.component.jms,org.apache.camel.converter;version="2.15",
+ org.apache.camel.converter.jaxp;version="2.15",org.apache.camel.proce
+ ssor;version="2.15",org.apache.commons.logging,org.apache.cxf;version
+ ="3.1",org.apache.cxf.binding;version="3.1",org.apache.cxf.binding.co
+ rba,org.apache.cxf.binding.soap;version="3.1",org.apache.cxf.binding.
+ soap.spring;version="3.1",org.apache.cxf.bus;version="3.1",org.apache
+ .cxf.bus.resource;version="3.1",org.apache.cxf.bus.spring;version="3.
+ 1",org.apache.cxf.buslifecycle;version="3.1",org.apache.cxf.catalog;v
+ ersion="3.1",org.apache.cxf.configuration;version="3.1",org.apache.cx
+ f.configuration.spring;version="3.1",org.apache.cxf.endpoint;version=
+ "3.1",org.apache.cxf.headers;version="3.1",org.apache.cxf.management;
+ version="3.1",org.apache.cxf.management.jmx,org.apache.cxf.phase;vers
+ ion="3.1",org.apache.cxf.resource;version="3.1",org.apache.cxf.transp
+ ort;version="3.1",org.apache.cxf.transport.http;version="3.1",org.apa
+ che.cxf.transport.http.policy;version="3.1",org.apache.cxf.transport.
+ http_jetty,org.apache.cxf.transport.http_osgi,org.apache.cxf.transpor
+ t.jms,org.apache.cxf.transports.http;version="2.7",org.apache.cxf.wor
+ kqueue;version="3.1",org.apache.cxf.wsdl;version="3.1",org.apache.cxf
+ .wsdl11;version="3.1",org.springframework.beans.factory.config;versio
+ n="2.5",pl.edu.agh.iosr.realestatebroker,pl.edu.agh.iosr.realestatebr
+ oker.model,pl.edu.agh.iosr.realestatebroker.service;version="1.0"
+
