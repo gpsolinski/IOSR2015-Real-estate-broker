@@ -24,7 +24,7 @@
 
         <route>
             <from uri="queuingservice:queue:in" />
-            <to uri="bean:incidentSaver?method=process" />
+            <to uri="bean:service?method=save" />
         </route>
 
     </camelContext>
@@ -44,5 +44,5 @@
         <property name="code" value="1"/>
     </bean>
     <bean id="webservice" class="pl.edu.agh.iosr.realestatebroker.internal.WebService"/>
-
+    <bean id="service" class="pl.edu.agh.iosr.realestatebroker.service.impl.EstateOfferServiceImpl"/>
 </blueprint>

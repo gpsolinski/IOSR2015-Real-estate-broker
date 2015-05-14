@@ -86,6 +86,7 @@
                 </Private-Package>
                 <Export-Package>
                     pl.edu.agh.iosr.realestatebroker,
+                    pl.edu.agh.iosr.realestatebroker.webservice,
                     '=META-INF.wsdl'
                 </Export-Package>
                 <_failok>true</_failok>

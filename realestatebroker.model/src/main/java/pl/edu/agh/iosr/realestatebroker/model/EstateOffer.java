@@ -24,6 +24,7 @@ public class EstateOffer implements Serializable {
     private Integer garageForCars;
     private Date creationTime;
     private Date validUntilDate;
+    private int ownerId;
 
     public Integer getId() {
         return id;
@@ -152,4 +153,10 @@ public class EstateOffer implements Serializable {
     public void setValidUntilDate(Date validUntilDate) {
         this.validUntilDate = validUntilDate;
     }
+
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) { this.ownerId = ownerId; }
 }
