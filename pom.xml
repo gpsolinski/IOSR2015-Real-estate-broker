@@ -28,6 +28,7 @@
     <module>realestatebroker.service</module>
     <module>realestatebroker.webservice</module>
     <module>realestatebroker.db</module>
+    <module>realestatebroker.features</module>
   </modules>
 
   <properties>

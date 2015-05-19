@@ -9,7 +9,7 @@ Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
 Build-Jdk: 1.7.0_55
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1431513391176
+Bnd-LastModified: 1432074444499
 Bundle-ManifestVersion: 2
 Import-Package: META-INF.pl.edu.agh.iosr.realestatebroker.model,org.ap
  ache.commons.dbcp,org.apache.commons.logging,org.hibernate,org.hibern

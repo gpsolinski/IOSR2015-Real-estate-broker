@@ -6,7 +6,7 @@ Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
 Bundle-Version: 1.0.0.SNAPSHOT
 Build-Jdk: 1.7.0_55
-Bnd-LastModified: 1431513389911
+Bnd-LastModified: 1432074442536
 Spring-Context: *;publish-context:=false;create-asynchronously:=true
 Bundle-ManifestVersion: 2
 Import-Package: javax.transaction,org.apache.activemq,org.apache.activ

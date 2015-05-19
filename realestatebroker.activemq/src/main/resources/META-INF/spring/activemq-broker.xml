@@ -14,7 +14,7 @@
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"/>
      
     <broker xmlns="http://activemq.apache.org/schema/core" brokerName="default"
-            dataDirectory="${servicemix.base}/data/activemq/default" useShutdownHook="false">
+            dataDirectory="${karaf.base}/data/activemq/default" useShutdownHook="false">
          
                 <!-- Destination specific policies using destination names or wildcards -->
                 
@@ -45,7 +45,7 @@
         </networkConnectors>        
                 
         <persistenceAdapter>                        
-            <amqPersistenceAdapter syncOnWrite="false" directory="${servicemix.base}/data/activemq/default"
+            <amqPersistenceAdapter syncOnWrite="false" directory="${karaf.base}/data/activemq/default"
                                    maxFileLength="20 mb"/>                    
         </persistenceAdapter>
          
