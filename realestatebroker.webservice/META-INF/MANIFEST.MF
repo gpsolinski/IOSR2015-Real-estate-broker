@@ -7,7 +7,7 @@ Build-Jdk: 1.7.0_55
 Bundle-Version: 1.0.0.SNAPSHOT
 Tool: Bnd-0.0.255
 Bundle-Name: webservice [pl.edu.agh.iosr.realestatebroker]
-Bnd-LastModified: 1432074450506
+Bnd-LastModified: 1432147255747
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: webservice

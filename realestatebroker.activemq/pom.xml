@@ -1,72 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <properties>
-    <bundle.symbolicName>activemq</bundle.symbolicName>
-    <bundle.namespace>pl.edu.agh.iosr.realestatebroker.activemq</bundle.namespace>
-  </properties>
+    <properties>
+        <bundle.symbolicName>activemq</bundle.symbolicName>
+        <bundle.namespace>pl.edu.agh.iosr.realestatebroker.activemq</bundle.namespace>
+    </properties>
 
-  <parent>
-      <groupId>pl.edu.agh.iosr</groupId>
-      <artifactId>realestatebroker</artifactId>
-      <version>1.0-SNAPSHOT</version>
-  </parent>
+    <parent>
+        <groupId>pl.edu.agh.iosr</groupId>
+        <artifactId>realestatebroker</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>pl.edu.agh.iosr</groupId>
-  <artifactId>realestatebroker.activemq</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pl.edu.agh.iosr</groupId>
+    <artifactId>realestatebroker.activemq</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-  <name>${bundle.symbolicName} [${bundle.namespace}]</name>
+    <name>${bundle.symbolicName} [${bundle.namespace}]</name>
 
-  <packaging>bundle</packaging>
+    <packaging>bundle</packaging>
 
-  <dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>${activemq-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <version>${activemq-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-ra</artifactId>
+            <version>${activemq-version}</version>
+        </dependency>
+    </dependencies>
 
-    <dependency>
-      <groupId>javax.transaction</groupId>
-      <artifactId>jta</artifactId>
-      <version>1.1</version>
-    </dependency>
-  </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-      </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <version>2.0.1</version>
 
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <version>2.0.1</version>
+                <configuration>
+                    <manifestLocation>META-INF</manifestLocation>
+                    <instructions>
+                        <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
+                        <Bundle-Version>${project.version}</Bundle-Version>
 
-        <configuration>
-          <manifestLocation>META-INF</manifestLocation>
-          <instructions>
-            <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
-            <Bundle-Version>${project.version}</Bundle-Version>
-
-            <DynamicImport-Package>*</DynamicImport-Package>
-            <Import-Package>
-              javax.transaction,
-              org.apache.activemq,
-              org.apache.activemq.pool,
-              org.springframework.beans.factory.config,
-              *</Import-Package>
-            <Include-Resource>src/main/resources</Include-Resource>
-            <Spring-Context>*;publish-context:=false;create-asynchronously:=true</Spring-Context>
-            <Private-Package></Private-Package>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+                        <DynamicImport-Package>*</DynamicImport-Package>
+                        <Import-Package>
+                            javax.transaction,
+                            org.apache.activemq,
+                            org.apache.activemq.pool,
+                            org.springframework.beans.factory.config,
+                            *
+                        </Import-Package>
+                        <Include-Resource>src/main/resources</Include-Resource>
+                        <Spring-Context>*;publish-context:=false;create-asynchronously:=true</Spring-Context>
+                        <Private-Package></Private-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

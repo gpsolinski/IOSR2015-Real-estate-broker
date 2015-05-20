@@ -50,29 +50,11 @@
     <build>
         <resources>
             <resource>
-                <directory>target/src/main/resources</directory>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
 
         <plugins>
-            <plugin>
-                <groupId>org.apache.karaf.tooling</groupId>
-                <artifactId>features-maven-plugin</artifactId>
-                <version>2.2.11</version>
-                <executions>
-                    <execution>
-                        <id>generate</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>generate-features-xml</goal>
-                        </goals>
-                        <configuration>
-                            <kernelVersion>2.4.1</kernelVersion>
-                            <outputFile>target/src/main/resources/features.xml</outputFile>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>

@@ -103,6 +103,11 @@
                   org.postgresql,
                   pl.edu.agh.iosr.realestatebroker.model,
                   org.apache.commons.dbcp,
+                  org.springframework.osgi,
+                  org.springframework.aop,
+                  org.springframework.aop.framework,
+                  org.springframework.transaction,
+                  org.springframework.transaction.interceptor,
                   *
               </Import-Package>
             <Export-Package>${bundle.namespace}.dao</Export-Package>

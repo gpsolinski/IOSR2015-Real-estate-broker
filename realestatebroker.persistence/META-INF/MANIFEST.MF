@@ -9,11 +9,15 @@ Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
 Build-Jdk: 1.7.0_55
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1432074444499
+Bnd-LastModified: 1432147249751
 Bundle-ManifestVersion: 2
 Import-Package: META-INF.pl.edu.agh.iosr.realestatebroker.model,org.ap
  ache.commons.dbcp,org.apache.commons.logging,org.hibernate,org.hibern
- ate.classic,org.postgresql,pl.edu.agh.iosr.realestatebroker.dao,pl.ed
- u.agh.iosr.realestatebroker.model
+ ate.classic,org.postgresql,org.springframework.aop;version="2.5.6.SEC
+ 03",org.springframework.aop.framework;version="2.5.6.SEC03",org.sprin
+ gframework.osgi,org.springframework.transaction;version="2.5.6.SEC03"
+ ,org.springframework.transaction.interceptor;version="2.5.6.SEC03",pl
+ .edu.agh.iosr.realestatebroker.dao,pl.edu.agh.iosr.realestatebroker.m
+ odel
 Bundle-SymbolicName: persistence
 

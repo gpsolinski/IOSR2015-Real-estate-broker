@@ -34,5 +34,6 @@
   <properties>
       <camel-version>2.15.1</camel-version>
       <felix-version>2.0.1</felix-version>
+      <activemq-version>5.7.0</activemq-version>
   </properties>
 </project>

@@ -9,7 +9,7 @@ Bundle-Name: service [pl.edu.agh.iosr.realestatebroker]
 Created-By: Apache Maven Bundle Plugin
 Bundle-Version: 1.0.0.SNAPSHOT
 Build-Jdk: 1.7.0_55
-Bnd-LastModified: 1432074445230
+Bnd-LastModified: 1432147250342
 Bundle-ManifestVersion: 2
 Import-Package: META-INF.wsdl,javax.jws,javax.jws.soap,javax.transacti
  on,javax.xml.bind,javax.xml.bind.annotation,javax.xml.namespace,javax
