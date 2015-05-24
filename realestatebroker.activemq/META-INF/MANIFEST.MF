@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
-Built-By: dawid_000
+Bundle-SymbolicName: activemq
+Built-By: grzegorz
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1432477196171
+Import-Package: javax.transaction,org.apache.activemq;version="5.3",or
+ g.apache.activemq.pool;version="5.3",org.springframework.beans.factor
+ y.config;version="2.5"
+DynamicImport-Package: *
 Tool: Bnd-0.0.357
+Spring-Context: *;publish-context:=false;create-asynchronously:=true
+Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: activemq [pl.edu.agh.iosr.realestatebroker.activemq]
 Created-By: Apache Maven Bundle Plugin
-DynamicImport-Package: *
-Bundle-Version: 1.0.0.SNAPSHOT
-Build-Jdk: 1.7.0_55
-Bnd-LastModified: 1432147246958
-Spring-Context: *;publish-context:=false;create-asynchronously:=true
-Bundle-ManifestVersion: 2
-Import-Package: javax.transaction,org.apache.activemq;version="5.7",or
- g.apache.activemq.pool;version="5.7",org.springframework.beans.factor
- y.config;version="3.0",spring-dm
-Bundle-SymbolicName: activemq
+Build-Jdk: 1.8.0_31
 
