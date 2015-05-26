@@ -6,19 +6,19 @@
          http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- DAO Declarations -->
-    <bean id="estateOfferDAO" class="pl.edu.agh.iosr.realestatebroker.dao.EstateOfferDAO">
+    <bean id="estateOfferDAO" class="pl.edu.agh.iosr.realestatebroker.dao.Impl.EstateOfferDAOImpl">
         <property name="sessionFactory">
             <ref bean="sessionFactory" />
         </property>
     </bean>
 
-    <bean id="userDAO" class="pl.edu.agh.iosr.realestatebroker.dao.UserDAO">
+    <bean id="userDAO" class="pl.edu.agh.iosr.realestatebroker.dao.Impl.UserDAOImpl">
         <property name="sessionFactory">
             <ref bean="sessionFactory" />
         </property>
     </bean>
 
-    <bean id="messageDAO" class="pl.edu.agh.iosr.realestatebroker.dao.MessageDAO">
+    <bean id="messageDAO" class="pl.edu.agh.iosr.realestatebroker.dao.Impl.MessageDAOImpl">
         <property name="sessionFactory">
             <ref bean="sessionFactory" />
         </property>

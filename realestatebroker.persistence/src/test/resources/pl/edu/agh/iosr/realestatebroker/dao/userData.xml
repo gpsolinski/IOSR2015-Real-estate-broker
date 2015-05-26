@@ -1,0 +1,4 @@
+<dataset>
+    <system_user user_id="1" login="jdoe" first_name="John" last_name="Doe" email="john@doe.com" phone="0123456"/>
+    <system_user user_id="2" login="nport" first_name="Natalie" last_name="Portman" email="nat@port.com"/>
+</dataset>

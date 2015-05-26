@@ -5,6 +5,8 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import pl.edu.agh.iosr.realestatebroker.dao.UserDAO;
 import pl.edu.agh.iosr.realestatebroker.model.User;
 
@@ -13,10 +15,14 @@ import java.util.List;
 /**
  * Created by dpjar_000 on 2015-04-28.
  */
+@Transactional
 public class UserDAOImpl implements UserDAO {
 
     private static final transient Log LOG = LogFactory.getLog(UserDAOImpl.class);
+
+    @Autowired
     private SessionFactory sessionFactory;
+
     private Query query = null;
     private final static String findUserByLogin = "select u from User as u where u.login = :ref";
     private final static String findUser = "select u from User as u";

@@ -2,6 +2,8 @@ package pl.edu.agh.iosr.realestatebroker.dao.Impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import pl.edu.agh.iosr.realestatebroker.dao.EstateOfferDAO;
 import pl.edu.agh.iosr.realestatebroker.model.EstateOffer;
 
@@ -12,10 +14,14 @@ import org.hibernate.Query;
 /**
  * Created by dpjar_000 on 2015-04-28.
  */
+@Transactional
 public class EstateOfferDAOImpl implements EstateOfferDAO {
 
     private static final transient Log LOG = LogFactory.getLog(EstateOfferDAOImpl.class);
+
+    @Autowired
     private SessionFactory sessionFactory;
+
     private Query query = null;
     private final static String findEstateOfferByTitle = "select e from EstateOffer as e where e.title = :ref";
     private final static String findEstateOffer = "select e from EstateOffer as e";

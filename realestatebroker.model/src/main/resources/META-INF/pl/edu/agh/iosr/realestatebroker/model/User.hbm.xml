@@ -4,9 +4,9 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping schema="public">
-    <class name="pl.edu.agh.iosr.realestatebroker.model.User" table="user">
+    <class name="pl.edu.agh.iosr.realestatebroker.model.User" table="system_user">
         <meta attribute="extends">Abstract</meta>
-        <id name="id" column="user_id"  type="int">
+        <id name="id" column="user_id" type="int">
             <generator class="native" />
         </id>
 

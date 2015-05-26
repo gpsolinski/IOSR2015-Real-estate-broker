@@ -20,7 +20,7 @@
         <property column="number_of_bedrooms" not-null="true" name="numberOfBedrooms" type="short" />
         <property column="number_of_floors" not-null="true" name="numberOfFloors" type="short" />
         <property column="garage_for_cars" not-null="false" name="garageForCars" type="short" />
-        <property column="seperate_kitchen" not-null="true" name="seperateKitchen" type="boolean" />
+        <property column="seperate_kitchen" not-null="true" name="separateKitchen" type="boolean" />
         <property column="ctime" not-null="true" name="creationTime" type="timestamp" />
         <property column="valid_until" not-null="false" name="validUntilDate" type="timestamp" />
         <property column="estate_type" not-null="true" name="estateType" >

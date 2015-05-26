@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:osgi="http://www.springframework.org/schema/osgi"
-       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
-       xsi:schemaLocation="
-       http://www.springframework.org/schema/beans
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd
-       http://www.springframework.org/schema/osgi
-       http://www.springframework.org/schema/osgi/spring-osgi.xsd
-       http://www.springframework.org/schema/osgi-compendium
-       http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+       http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:annotation-config />
-    <context:property-placeholder properties-ref="preProps" />
+    <tx:annotation-driven />
 
     <!--  DB connection and persistence layer -->
     <!--  DataSource Definition  -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${driverClassName}" />
-        <property name="url" value="${url}" />
-        <property name="username" value="${username}" />
-        <property name="password" value="${password}" />
+        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://localhost:5432/realestatebroker" />
+        <property name="username" value="rebroker" />
+        <property name="password" value="rebroker" />
     </bean>
 
     <!--  Spring Data Access Exception Translator Definition	-->
@@ -63,20 +56,5 @@
             <ref local="sessionFactory" />
         </property>
     </bean>
-
-    <!--
-    Hibernate Transaction Manager exported as OSGI service because used
-    pl.edu.agh.iosr.realestatebroker.service
-
-    <osgi:service id="transactionManagerOsgi" ref="transactionManager"
-    interface="org.springframework.transaction.PlatformTransactionManager" />
-    -->
-
-    <osgix:cm-properties id="preProps" persistent-id="pl.edu.agh.iosr.realestatebroker.datasource">
-        <prop key="driverClassName">org.postgresql.Driver</prop>
-        <prop key="url">jdbc:postgresql://localhost:5432/realestatebroker</prop>
-        <prop key="username">rebroker</prop>
-        <prop key="password">rebroker</prop>
-    </osgix:cm-properties>
 
 </beans>
