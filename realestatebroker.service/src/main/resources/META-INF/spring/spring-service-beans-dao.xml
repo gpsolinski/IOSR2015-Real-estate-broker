@@ -13,6 +13,19 @@
         </property>
     </bean>
 
+    <bean id="messageServiceTarget" class="pl.edu.agh.iosr.realestatebroker.service.impl.MessageServiceImpl">
+        <property name="messageDAO">
+            <osgi:reference interface="pl.edu.agh.iosr.realestatebroker.dao.MessageDAO"/>
+        </property>
+    </bean>
+
+    <bean id="userServiceTarget" class="pl.edu.agh.iosr.realestatebroker.service.impl.UserServiceImpl">
+        <property name="userDAO">
+            <osgi:reference interface="pl.edu.agh.iosr.realestatebroker.dao.UserDAO"/>
+        </property>
+    </bean>
+
+
     <bean id="abstractService" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
         <property name="transactionManager">
             <osgi:reference interface="org.springframework.transaction.PlatformTransactionManager"/>
@@ -33,5 +46,36 @@
             </props>
         </property>
     </bean>
+
+    <bean id="messageService"
+          parent="abstractService"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+
+        <property name="target">
+            <ref bean="messageServiceTarget" />
+        </property>
+
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="userService"
+          parent="abstractService"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+
+        <property name="target">
+            <ref bean="userServiceTarget" />
+        </property>
+
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+
 
 </beans>
