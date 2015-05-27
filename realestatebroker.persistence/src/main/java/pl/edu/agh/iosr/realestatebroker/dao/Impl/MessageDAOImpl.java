@@ -5,6 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.springframework.transaction.annotation.Transactional;
 import pl.edu.agh.iosr.realestatebroker.dao.MessageDAO;
 import pl.edu.agh.iosr.realestatebroker.model.Message;
 
@@ -13,6 +14,7 @@ import java.util.List;
 /**
  * Created by dpjar_000 on 2015-04-29.
  */
+@Transactional
 public class MessageDAOImpl implements MessageDAO {
 
     private static final transient Log LOG = LogFactory.getLog(MessageDAOImpl.class);

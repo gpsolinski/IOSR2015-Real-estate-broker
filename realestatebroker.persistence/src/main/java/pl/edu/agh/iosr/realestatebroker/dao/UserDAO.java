@@ -15,7 +15,7 @@ public interface UserDAO {
 
     public List<User> findByLogin(String login);
 
-    public void save (User usee);
+    public void save (User user);
 
     public void remove(int id);
 }

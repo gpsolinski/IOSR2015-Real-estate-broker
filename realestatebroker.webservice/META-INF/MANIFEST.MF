@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Export-Package: META-INF.wsdl,pl.edu.agh.iosr.realestatebroker.webserv
  ice;uses:="javax.jws.soap,javax.jws,javax.xml.bind.annotation,javax.x
  ml.ws,javax.xml.namespace"
-Built-By: dawid_000
-Build-Jdk: 1.7.0_55
+Built-By: gsolinsk
+Build-Jdk: 1.7.0_71
 Bundle-Version: 1.0.0.SNAPSHOT
 Tool: Bnd-0.0.255
 Bundle-Name: webservice [pl.edu.agh.iosr.realestatebroker]
-Bnd-LastModified: 1432147255747
+Bnd-LastModified: 1432729825326
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: webservice

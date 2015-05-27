@@ -20,7 +20,6 @@ public class UserDAOImpl implements UserDAO {
 
     private static final transient Log LOG = LogFactory.getLog(UserDAOImpl.class);
 
-    @Autowired
     private SessionFactory sessionFactory;
 
     private Query query = null;

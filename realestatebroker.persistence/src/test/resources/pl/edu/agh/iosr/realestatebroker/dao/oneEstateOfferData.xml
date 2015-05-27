@@ -5,10 +5,5 @@
                   back_yard_area="30" number_of_bedrooms="3" number_of_floors="2"
                   garage_for_cars="1" seperate_kitchen="true"
                   ctime="2015-05-24 19:50:12" estate_type="0"/>
-    <estate_offer id="2" title="Awesome apartament" description="Something" user_id="1"
-                  total_area="85" living_area="80" number_of_bedrooms="2"
-                  number_of_floors="1" floor_number="4" seperate_kitchen="true"
-                  ctime="2015-05-24 19:50:12" valid_until="2016-05-24 19:50:12"
-                  estate_type="1"/>
     <message />
 </dataset>

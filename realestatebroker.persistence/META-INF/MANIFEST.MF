@@ -2,22 +2,23 @@ Manifest-Version: 1.0
 Export-Package: pl.edu.agh.iosr.realestatebroker.dao;uses:="pl.edu.agh
  .iosr.realestatebroker.model"
 Private-Package: pl.edu.agh.iosr.realestatebroker.dao.Impl
-Built-By: dawid_000
+Built-By: gsolinsk
 Tool: Bnd-0.0.255
 Bundle-Name: persistence [pl.edu.agh.iosr.realestatebroker]
 Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
-Build-Jdk: 1.7.0_55
+Build-Jdk: 1.7.0_71
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1432147249751
+Bnd-LastModified: 1432729823158
 Bundle-ManifestVersion: 2
 Import-Package: META-INF.pl.edu.agh.iosr.realestatebroker.model,org.ap
  ache.commons.dbcp,org.apache.commons.logging,org.hibernate,org.hibern
  ate.classic,org.postgresql,org.springframework.aop;version="2.5.6.SEC
  03",org.springframework.aop.framework;version="2.5.6.SEC03",org.sprin
- gframework.osgi,org.springframework.transaction;version="2.5.6.SEC03"
- ,org.springframework.transaction.interceptor;version="2.5.6.SEC03",pl
- .edu.agh.iosr.realestatebroker.dao,pl.edu.agh.iosr.realestatebroker.m
- odel
+ gframework.beans.factory.annotation;version="2.5.6.SEC03",org.springf
+ ramework.osgi,org.springframework.transaction;version="2.5.6.SEC03",o
+ rg.springframework.transaction.annotation;version="2.5.6.SEC03",org.s
+ pringframework.transaction.interceptor;version="2.5.6.SEC03",pl.edu.a
+ gh.iosr.realestatebroker.dao,pl.edu.agh.iosr.realestatebroker.model
 Bundle-SymbolicName: persistence
 

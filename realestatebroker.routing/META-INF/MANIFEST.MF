@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Built-By: dawid_000
-Build-Jdk: 1.7.0_55
+Built-By: gsolinsk
+Build-Jdk: 1.7.0_71
 Bundle-Version: 1.0.0.SNAPSHOT
 Tool: Bnd-0.0.357
 Bundle-Name: routing [pl.edu.agh.iosr.realestatebroker.routing]
-Bnd-LastModified: 1432147256618
+Bnd-LastModified: 1432729825849
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: routing
