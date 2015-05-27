@@ -1,20 +1,20 @@
 Manifest-Version: 1.0
-Export-Package: pl.edu.agh.iosr.realestatebroker.webservice;uses:="jav
- ax.jws.soap,javax.jws,javax.xml.bind.annotation,javax.xml.namespace,j
- avax.xml.ws",META-INF.wsdl
-Bundle-SymbolicName: webservice
+Export-Package: META-INF.wsdl,pl.edu.agh.iosr.realestatebroker.webserv
+ ice;uses:="javax.jws.soap,javax.jws,javax.xml.bind.annotation,javax.x
+ ml.ws,javax.xml.namespace"
+Built-By: dawid_000
+Build-Jdk: 1.7.0_55
 Bundle-Version: 1.0.0.SNAPSHOT
-Bundle-Name: webservice [pl.edu.agh.iosr.realestatebroker]
-Built-By: grzegorz
-Bundle-ManifestVersion: 2
-Bnd-LastModified: 1432477203972
-Import-Package: META-INF.wsdl,javax.jws;version="2.0",javax.jws.soap;v
- ersion="2.0",javax.xml.bind,javax.xml.bind.annotation,javax.xml.names
- pace,javax.xml.ws;version="2.1",org.aopalliance.aop,org.springframewo
- rk.aop,org.springframework.aop.framework,org.springframework.transact
- ion,org.springframework.transaction.interceptor,pl.edu.agh.iosr.reale
- statebroker.dao,pl.edu.agh.iosr.realestatebroker.webservice
-Created-By: Apache Maven Bundle Plugin
 Tool: Bnd-0.0.255
-Build-Jdk: 1.8.0_31
+Bundle-Name: webservice [pl.edu.agh.iosr.realestatebroker]
+Bnd-LastModified: 1432717427350
+Created-By: Apache Maven Bundle Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: webservice
+Import-Package: META-INF.wsdl,javax.jws,javax.jws.soap,javax.xml.bind,
+ javax.xml.bind.annotation,javax.xml.namespace,javax.xml.ws,org.aopall
+ iance.aop,org.springframework.aop,org.springframework.aop.framework,o
+ rg.springframework.transaction,org.springframework.transaction.interc
+ eptor,pl.edu.agh.iosr.realestatebroker.dao,pl.edu.agh.iosr.realestate
+ broker.webservice
 

@@ -45,8 +45,7 @@
         </networkConnectors>
 
         <persistenceAdapter>
-            <amqPersistenceAdapter syncOnWrite="false" directory="${servicemix.base}/data/activemq/default"
-                                   maxFileLength="20 mb"/>
+            <kahaDB journalMaxFileLength="32mb" />
         </persistenceAdapter>
 
         <!-- Use the following if you wish to configure the journal with JDBC -->

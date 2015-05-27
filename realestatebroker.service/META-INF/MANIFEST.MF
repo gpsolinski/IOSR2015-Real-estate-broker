@@ -1,8 +1,16 @@
 Manifest-Version: 1.0
-Bundle-SymbolicName: service
-Built-By: grzegorz
+Export-Package: META-INF.wsdl,pl.edu.agh.iosr.realestatebroker.service
+ ;uses:="pl.edu.agh.iosr.realestatebroker.model";version="1.0.0.SNAPSH
+ OT"
+Private-Package: pl.edu.agh.iosr.realestatebroker.service.impl
+Built-By: dawid_000
+Tool: Bnd-0.0.255
+Bundle-Name: service [pl.edu.agh.iosr.realestatebroker]
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0.SNAPSHOT
+Build-Jdk: 1.7.0_55
+Bnd-LastModified: 1432717423343
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1432477198533
 Import-Package: META-INF.wsdl,javax.jws,javax.jws.soap,javax.transacti
  on,javax.xml.bind,javax.xml.bind.annotation,javax.xml.namespace,javax
  .xml.ws,org.aopalliance.aop;version="1.0",org.apache.commons.logging,
@@ -12,13 +20,5 @@ Import-Package: META-INF.wsdl,javax.jws,javax.jws.soap,javax.transacti
  ="2.5.6.SEC01",pl.edu.agh.iosr.realestatebroker.dao,pl.edu.agh.iosr.r
  ealestatebroker.model,pl.edu.agh.iosr.realestatebroker.service;versio
  n="1.0.0.SNAPSHOT"
-Tool: Bnd-0.0.255
-Export-Package: META-INF.wsdl,pl.edu.agh.iosr.realestatebroker.service
- ;uses:="pl.edu.agh.iosr.realestatebroker.model";version="1.0.0.SNAPSH
- OT"
-Bundle-Version: 1.0.0.SNAPSHOT
-Bundle-Name: service [pl.edu.agh.iosr.realestatebroker]
-Private-Package: pl.edu.agh.iosr.realestatebroker.service.impl
-Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_31
+Bundle-SymbolicName: service
 

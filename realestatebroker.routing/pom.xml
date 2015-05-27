@@ -58,18 +58,8 @@
         <version>${cxf-version}</version>
     </dependency>
     <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-common-utilities</artifactId>
-        <version>${cxf-version}</version>
-    </dependency>
-    <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf</artifactId>
-        <version>${camel-version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-osgi</artifactId>
         <version>${camel-version}</version>
     </dependency>
     <dependency>
@@ -123,12 +113,6 @@
           <scope>test</scope>
       </dependency>
       <dependency>
-          <groupId>org.apache.camel</groupId>
-          <artifactId>camel-spring</artifactId>
-          <version>${camel-version}</version>
-          <!-- <scope>test</scope>  -->
-      </dependency>
-      <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-test</artifactId>
           <version>${spring-version}</version>
@@ -168,7 +152,6 @@
               org.apache.camel.component.jms,
               org.apache.camel.converter,
               org.apache.camel.converter.jaxp,
-              pl.edu.agh.iosr.realestatebroker,
               pl.edu.agh.iosr.realestatebroker.model,
               pl.edu.agh.iosr.realestatebroker.service,
               org.apache.camel.processor,
@@ -177,7 +160,6 @@
               org.apache.activemq.pool,
               org.apache.cxf,
               org.apache.cxf.binding,
-              org.apache.cxf.binding.corba,
               org.apache.cxf.binding.soap,
               org.apache.cxf.binding.soap.spring,
               org.apache.cxf.bus,
@@ -197,9 +179,6 @@
               org.apache.cxf.transport.http,
               org.apache.cxf.transport.http.policy,
               org.apache.cxf.transport.http_jetty,
-              org.apache.cxf.transport.http_osgi,
-              org.apache.cxf.transport.jms,
-              org.apache.cxf.transports.http,
               org.apache.cxf.workqueue,
               org.apache.cxf.wsdl,
               org.apache.cxf.wsdl11,

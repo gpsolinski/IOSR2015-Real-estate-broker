@@ -9,6 +9,7 @@
     <bundle>mvn:pl.edu.agh.iosr/realestatebroker.routing/1.0-SNAPSHOT</bundle>
   </feature>
 
+
   <feature name="transaction" version="1.0.0">
     <bundle>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-j2ee-connector_1.5_spec/2.0.0</bundle>
@@ -19,46 +20,39 @@
 
   <feature name="connector" version="4.0.0">
     <feature version="1.0.0">transaction</feature>
+    <bundle>mvn:org.apache.geronimo.specs/geronimo-j2ee-connector_1.5_spec/2.0.0</bundle>
     <bundle>mvn:org.apache.geronimo.components/geronimo-connector/2.1.3</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-servlet_2.5_spec/1.1.2</bundle>
     <bundle>mvn:org.springframework/spring-tx/2.5.6.SEC01</bundle>
-    <bundle>mvn:org.springframework/spring-aop/2.5.6.SEC01</bundle>
-    <bundle>mvn:org.springframework/spring-beans/2.5.6.SEC01</bundle>
-    <bundle>mvn:org.springframework/spring-context/2.5.6.SEC01</bundle>
-    <bundle>mvn:org.jencks/jencks/2.2</bundle>
+    <bundle>mvn:org.apache.cxf/cxf-core/3.1.0</bundle>
   </feature>
 
   <feature name="activemq" version="5.3.0">
     <feature version="4.0.0">connector</feature>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-j2ee-management_1.1_spec/1.0.1</bundle>
-    <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.pool/1.4.0</bundle>
-    <bundle>mvn:org.apache.xbean/xbean-spring/4.2</bundle>
-    <bundle>mvn:org.jasypt/com.springsource.org.jasypt.encryption/1.5.0</bundle>
-    <bundle>mvn:org.apache.activemq/kahadb/5.7.0</bundle>
-    <bundle>mvn:org.apache.activemq/activemq-core/5.7.0</bundle>
-    <bundle>mvn:org.apache.activemq/activemq-ra/5.7.0</bundle>
-    <bundle>mvn:org.apache.activemq/activemq-console/5.7.0</bundle>
-    <bundle>mvn:org.apache.activemq/activemq-pool/5.7.0</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-pool/1.4_1</bundle>
+    <bundle>mvn:org.apache.xbean/xbean-spring/3.5</bundle>
+    <bundle>mvn:org.apache.activemq/kahadb/5.3.0</bundle>
+    <bundle>mvn:org.apache.activemq/activemq-core/5.3.0</bundle>
+    <bundle>mvn:org.apache.activemq/activemq-ra/5.3.0</bundle>
+    <bundle>mvn:org.apache.activemq/activemq-console/5.3.0</bundle>
+    <bundle>mvn:org.apache.activemq/activemq-pool/5.3.0</bundle>
   </feature>
 
-  <feature name="activemq-camel" version="5.7.0">
-    <bundle>mvn:org.apache.activemq/activemq-camel/5.7.0</bundle>
-  </feature>
-
-  <feature name="my-cxf" version="3.1.0">
-    <bundle>mvn:org.apache.cxf/cxf-core/3.1.0</bundle>
+  <feature name="activemq-camel" version="5.3.0">
+    <bundle>mvn:org.apache.activemq/activemq-camel/5.3.0</bundle>
   </feature>
 
   <feature name="hibernate">
     <bundle>mvn:org.springframework/spring-orm/2.5.6.SEC01</bundle>
     <bundle>mvn:org.springframework/spring-jdbc/2.5.6.SEC01</bundle>
     <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.dom4j/1.6.1_2</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/2.1_3_7</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-collections/3.2.1_3</bundle>
     <bundle>mvn:org.antlr/com.springsource.antlr/2.7.7</bundle>
     <bundle>mvn:org.jgroups/com.springsource.org.jgroups/2.5.1</bundle>
     <bundle>mvn:org.jboss.javassist/com.springsource.javassist/3.3.0.ga</bundle>
-    <bundle>mvn:net.sourceforge.cglib/com.springsource.net.sf.cglib/2.1.3</bundle>
-    <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
     <bundle>mvn:org.hibernate/com.springsource.org.hibernate/3.3.1.GA</bundle>
   </feature>
 

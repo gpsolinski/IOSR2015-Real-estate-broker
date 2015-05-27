@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Export-Package: META-INF.pl.edu.agh.iosr.realestatebroker.model,pl.edu
  .agh.iosr.realestatebroker.model
-Bundle-SymbolicName: model
+Built-By: dawid_000
+Build-Jdk: 1.7.0_55
 Bundle-Version: 1.0.0.SNAPSHOT
+Tool: Bnd-0.0.357
 Bundle-Name: model [pl.edu.agh.iosr.realestatebroker]
-Built-By: grzegorz
+Bnd-LastModified: 1432717419768
+Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1432477195148
+Bundle-SymbolicName: model
 Import-Package: META-INF.pl.edu.agh.iosr.realestatebroker.model,pl.edu
  .agh.iosr.realestatebroker.model
-Created-By: Apache Maven Bundle Plugin
-Tool: Bnd-0.0.357
-Build-Jdk: 1.8.0_31
 
